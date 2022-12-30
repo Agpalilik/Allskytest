@@ -286,12 +286,12 @@ def intersection(x1,y1,b1,x2,y2,b2):
 
 	# Adjust the bearings on the trigonometric circle
 	if sin(lon2 - lon1) > 0:
-	    bearing_1_2 = initial_bearing
-	    bearing_2_1 = (2 * pi) - final_bearing
+		bearing_1_2 = initial_bearing
+		bearing_2_1 = (2 * pi) - final_bearing
 
 	else:
-	    bearing_1_2 = (2 * pi) - initial_bearing
-	    bearing_2_1 = final_bearing
+		bearing_1_2 = (2 * pi) - initial_bearing
+		bearing_2_1 = final_bearing
 
 
 	# Angles between different points
@@ -335,7 +335,7 @@ for i in range(1,3):
 	file_name = file_name.strip() # Remove return line at the end of the string
 
 	with open(file_name, "r") as read_file:
-   		data = json.load(read_file)             # Read the json file with a complete data set from one of the cameras
+		data = json.load(read_file)             # Read the json file with a complete data set from one of the cameras
 	n_data[i] = len(data['best_meteor']['dt'])  # Number of observations in this data set
 	print("n_data[",i,"] =",n_data[i])
 	col = 0 #Start at column 0 in the excel file
